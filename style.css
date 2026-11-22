@@ -1,0 +1,136 @@
+/* Basic page styles */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #243044;
+    background-color: #f3f6fb;
+}
+
+/* Element selector */
+h1 {
+    margin: 0 0 8px;
+    font-size: 2.2rem;
+}
+
+h2 {
+    margin-top: 0;
+    color: #1e3a5f;
+}
+
+/* ID selector */
+#page-header {
+    padding: 42px 20px;
+    text-align: center;
+    color: #ffffff;
+    background-color: #2457a6;
+}
+
+#page-header p {
+    margin: 0;
+    color: #e6efff;
+}
+
+/* Class selectors */
+.container {
+    width: min(900px, calc(100% - 32px));
+    margin: 32px auto;
+}
+
+.expense-form-section,
+.expenses-list-section {
+    margin-bottom: 24px;
+    padding: 26px;
+    border-radius: 12px;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(28, 45, 75, 0.08);
+}
+
+.expense-form-section {
+    border-top: 5px solid #2d8a67;
+}
+
+.expenses-list-section {
+    border-top: 5px solid #e1a23b;
+}
+
+.section-description {
+    margin-top: -8px;
+    color: #667085;
+}
+
+.expense-form {
+    display: grid;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: 600;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    background-color: #ffffff;
+    font: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #8bb5f2;
+    border-color: #2457a6;
+}
+
+.add-expense-button {
+    width: fit-content;
+    padding: 11px 20px;
+    border: 0;
+    border-radius: 6px;
+    color: #ffffff;
+    background-color: #2457a6;
+    font: inherit;
+    font-weight: 600;
+    cursor: default;
+}
+
+.empty-state {
+    margin: 0;
+    padding: 22px;
+    border: 1px dashed #b8c4d6;
+    border-radius: 8px;
+    color: #667085;
+    text-align: center;
+    background-color: #f8fafc;
+}
+
+.page-footer {
+    padding: 18px;
+    color: #667085;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* A little extra room on wider screens */
+@media (min-width: 640px) {
+    .expense-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .form-group:last-of-type {
+        grid-column: 1 / -1;
+    }
+}

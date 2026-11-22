@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Budget Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="page-header" id="page-header">
+        <h1>My Budget Tracker</h1>
+        <p>Track your income and expenses in one place.</p>
+    </header>
+
+    <main class="container">
+        <section class="expense-form-section" id="add-expense">
+            <h2>Add Expense</h2>
+            <p class="section-description">Enter the details of a new expense below.</p>
+
+            <form class="expense-form">
+                <div class="form-group">
+                    <label for="expense-name">Expense Name</label>
+                    <input
+                        type="text"
+                        id="expense-name"
+                        name="expense-name"
+                        placeholder="e.g. Groceries"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-amount">Amount</label>
+                    <input
+                        type="number"
+                        id="expense-amount"
+                        name="expense-amount"
+                        placeholder="e.g. 1500"
+                        min="0"
+                        step="0.01"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="expense-category">Category</label>
+                    <select id="expense-category" name="expense-category">
+                        <option value="">Select a category</option>
+                        <option value="food">Food</option>
+                        <option value="transport">Transport</option>
+                        <option value="bills">Bills</option>
+                        <option value="shopping">Shopping</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <button type="button" class="add-expense-button">Add Expense</button>
+            </form>
+        </section>
+
+        <section class="expenses-list-section" id="your-expenses">
+            <h2>Your Expenses</h2>
+            <p class="empty-state">No expenses yet. Your expenses will appear here.</p>
+        </section>
+    </main>
+
+    <footer class="page-footer">
+        <p>My Budget Tracker &copy; 2026</p>
+    </footer>
+</body>
+</html>
